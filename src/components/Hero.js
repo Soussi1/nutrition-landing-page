@@ -1,13 +1,20 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "../styles/global.css";
 
 const Hero = () => {
   return (
-    <section className="hero">
-      <h2>Transform Your Health with Expert Nutrition Guidance</h2>
-      <p>Personalized meal plans and expert advice to help you live healthier.</p>
-      <a href="#contact" className="cta-button">Get Started</a>
-    </section>
+    <motion.section
+      id="hero"
+      className="hero"
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      <h1>Your Personalized Nutrition Plan</h1>
+      <p>Start your journey to a healthier lifestyle with expert guidance.</p>
+      <a href="#about" className="cta-btn">Learn More</a>
+    </motion.section>
   );
 };
 

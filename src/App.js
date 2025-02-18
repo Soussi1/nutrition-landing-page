@@ -1,15 +1,24 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import "./styles/global.css";
+import { ThemeProvider } from "./context/ThemeContext";
+import Navbar from "./components/NavBar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Services from "./components/Services";
+import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer"
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+    <ThemeProvider>
+      <Navbar />
+      <Hero />
+      <About />
+      <Services />
+      <Testimonials />
+      <Contact />
+      <Footer/>
+    </ThemeProvider>
   );
 }
 
